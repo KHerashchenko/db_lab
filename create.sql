@@ -32,8 +32,9 @@ loudness integer,
 liveness integer,
 valence integer,
 length integer,
-cousticness integer,
-speechiness integer
+acousticness integer,
+speechiness integer,
+popularity integer
 );
 
 ALTER TABLE Songs
