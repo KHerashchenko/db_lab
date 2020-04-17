@@ -7,7 +7,7 @@ group by Genres.name;
 
 -- task2
 
-select Artists.name, 
+select trim(Artists.name) as artist_name,
     round( count(SongsArtists.song_id)*100/(select count(*) from SongsArtists), 2) as songs_percentile
 from SongsArtists
     join Artists
@@ -18,6 +18,6 @@ group by Artists.name;
 
 -- task3
 
- select loudness, round(avg(popularity),2)
+ select loudness, round(avg(popularity),2) as popularity
  from Songs
  group by loudness;
